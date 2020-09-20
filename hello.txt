@@ -1,3 +1,12 @@
+windows常用命令
+cd 进入某个文件夹
+cd .. 回退
+cd / 回退到/
+mkdir test 新建文件夹test
+touch test.txt 新建test.txt文件
+rm test.txt 删除test.txt文件
+rm -rf test/ 强制删除test文件夹
+
 1.学习git的基本使用 
 git init 初始化git,在当前文件夹初始化git
 git status 查看当前文件状态
@@ -5,4 +14,6 @@ git add [文件名或者文件夹] 添加文件到缓存区
 git add . 当前文件夹下的所有文件都添加到缓缓存区
 git commit -m "提交记录" 提交文件到工作区
 git rm --cached 文件名 把当前文件在缓存区的状态回退
+git log 查看当前操作日志
+    git log --author="freedzz" 查找某个人的提交记录
 2.改变当前追踪的文件
