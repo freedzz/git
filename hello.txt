@@ -57,5 +57,16 @@
 	回退前：version1 > version 2 > version 3
 	回退后：version1 > version 2 > version 3 > version 4
 	
+17.git remote add helloGit https://github.com/freedzz/helloword.git 连接远程厂库 helloGit可以自定义名称
+
+18.git push -u master push本地代码到远程厂库
+
+19.git branch bug_fix_1 创建分支
+
+20.git checkout bug_fix_1 切换分支
+
+21.git checkout -b bug_fix_2 新建bug_fix_2分支并切换到bug_fix_2分支
+
+22.git branch -d bug_fix_2 删除分支bug_fix_2,不能在当前分支删除当前分支
 
 三、改变当前追踪的文件
