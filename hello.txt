@@ -81,4 +81,19 @@
 	1.取消冲突文件的合并（忽略当前冲突代码） git merge --abort
 	2.修改冲突代码，然后git add . 再git commit 提交冲突记录
 
+26.取消快转
+	git merge bug_fix_1 --no-ff 采用快转的和并方式，分支上面的commit在合并后会混淆，
+								取消快转后合并完的版本线图更加清晰，能清楚看到在分支上的commit
+	新开一个分支不要用快转机制，远端拉去服务器最新的代码可以用快转机制直接git pull
+
+27.git clone http:***** 从远端厂库克隆项目到本地
+
+28.git pull 更新本地代码 = git fetch + git merge （主要用于从远端服务器拉去合并最新的代码）
+
+29.git fetch 更新本地remote的远端厂库代码，更新完后还需要git merge 和并到本地厂库
+
+30.git remote orgin http:**** 设置orgin的地址为http:****
+
+31.git push -u orgin master 把本地的master代码推送到orgin远端厂库
+
 三、改变当前追踪的文件
