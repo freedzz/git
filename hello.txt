@@ -107,4 +107,10 @@
 
 35.git branch --no-merged | egrep -v "(^\*|master|develop)" | xargs git branch -D 删除没有合并的分支
 
+35.git branch -r 追踪远程厂库的分支
+
+36.git branch -a 查看所有分支
+
+37.git push -u git bug_fix_1 把本地分支上传到远端服务器(和master一样)
+
 三、改变当前追踪的文件
