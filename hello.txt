@@ -113,4 +113,12 @@
 
 37.git push -u git bug_fix_1 把本地分支上传到远端服务器(和master一样)
 
+38.git fetch 获取远端服务器的新分支和代码
+
+39.git push git --delete new1 删除远端分支
+
+40.移库
+	1.git remote -v 获取当前本地的提交地址
+	2.git remote set-url origin http:***** 重新设置远端提交地址
+	3.git push --all 把本地厂库代码提交到远端厂库
 三、改变当前追踪的文件
