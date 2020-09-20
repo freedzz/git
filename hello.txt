@@ -29,6 +29,8 @@
 
 7.git log 查看当前操作日志
     git log --author="freedzz" 查找某个人的提交记录
+	git log --oneline 简写log
+	git log --oneline --graph 展示版本线图
 
 8.git diff 查看当前追踪的文件的修改记录（只能在文件没有放入缓存区时查看文件修改的内容）
     git diff --staged 当文件放入缓存区后查看文件修改内容
