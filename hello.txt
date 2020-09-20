@@ -67,6 +67,8 @@
 
 21.git checkout -b bug_fix_2 新建bug_fix_2分支并切换到bug_fix_2分支
 
-22.git branch -d bug_fix_2 删除分支bug_fix_2,不能在当前分支删除当前分支
+22.git branch -d bug_fix_2 删除分支bug_fix_2,不能在当前分支删除当前分支,分支修改后没有提交也不能删除
+
+23.
 
 三、改变当前追踪的文件
