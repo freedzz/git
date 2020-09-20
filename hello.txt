@@ -40,5 +40,22 @@
 提交文件到缓冲区后，会显示原文件被重命名
     git mv 3.txt 2.txt 快速重命名
 
+11.git mv 3.txt /staff 2.txt 移动文件并重命名
+
+12.git commit -am "am 相当于git add 加上 git commit" 使用快捷提交方式
+
+13.git checkout -- index.html 回退本地文件到上次提交的状态（缓存区中的文件不会消失掉）
+
+14.git reset HEAD 文件名 撤销对当前文件的追踪-不把文件放到缓存区
+
+15.git reset --hard HEAD^ 回退到上一个版本 ^代表回退一个版本（回退之前的版本全部消失）
+    git reset --hard 386e091 回退到对应哈希值的版本
+	回退前：version1 > version 2 > version 3
+	回退后：version1
+	
+16.git checkout 1d107d0 -- index.html index.html文件回退到对应哈希值版本（相当于新增加一个commit版本，以前的版本都在）
+	回退前：version1 > version 2 > version 3
+	回退后：version1 > version 2 > version 3 > version 4
+	
 
 三、改变当前追踪的文件
