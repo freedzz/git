@@ -30,4 +30,6 @@
 7.git log 查看当前操作日志
     git log --author="freedzz" 查找某个人的提交记录
 
+8.git diff 查看当前追踪的文件的修改记录
+
 三、改变当前追踪的文件
