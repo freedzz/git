@@ -55,6 +55,7 @@
     git reset --hard 386e091 回退到对应哈希值的版本
 	回退前：version1 > version 2 > version 3
 	回退后：version1
+	git reset --hard ORIG_HEAD 回退到没有合并之前的状态
 	
 16.git checkout 1d107d0 -- index.html index.html文件回退到对应哈希值版本（相当于新增加一个commit版本，以前的版本都在）
 	回退前：version1 > version 2 > version 3
@@ -75,7 +76,7 @@
 23.git branch bug_fix_2 ff91dd4 回复删除的分支 创建分支时加上删除掉的分支的哈希值
 
 24.合并分支
-	git merge 分支名 把分支和并到当前分支
+	1.git merge 分支名 把分支和并到当前分支
 	
 25.合并冲突-当两个分支修改了相同位置的代码，合并代码时会发生冲突
 	1.取消冲突文件的合并（忽略当前冲突代码） git merge --abort
@@ -85,6 +86,8 @@
 	git merge bug_fix_1 --no-ff 采用快转的和并方式，分支上面的commit在合并后会混淆，
 								取消快转后合并完的版本线图更加清晰，能清楚看到在分支上的commit
 	新开一个分支不要用快转机制，远端拉去服务器最新的代码可以用快转机制直接git pull
+	git merge bug_fix_1 --no-ff --no-commit 合并代码但不提交到本地厂库（如果要commit，需要手动commit）
+	git merge bug_fix_1 --squash 合并小版本或者小功能时，压缩分支，合并完后只有master，并且分支的commit也看不见了（需要手动commit）
 
 27.git clone http:***** 从远端厂库克隆项目到本地
 
@@ -95,5 +98,13 @@
 30.git remote orgin http:**** 设置orgin的地址为http:****
 
 31.git push -u orgin master 把本地的master代码推送到orgin远端厂库
+
+32.git branch --merged 在分支上会把所有的分支显示出来 在master上会显示所有已经合并的分支
+
+33.git branch --no-merged 显示没有合并的分支
+
+34.git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d 删除合并分支中分支名不为master和develop的其他分支
+
+35.git branch --no-merged | egrep -v "(^\*|master|develop)" | xargs git branch -D 删除没有合并的分支
 
 三、改变当前追踪的文件
